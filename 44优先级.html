@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 继承<*<标签选择器<类选择器<id选择器<行内样式<!important */
+        /* 继承添加!important无效 */
+        #btn{
+            color:#f0f
+        }
+        .font {
+            color: #ff0;
+        }
+        span{
+            color: blue;
+        }
+        *{
+            color: green;
+        }
+        body{
+            color: red;
+        }
+        
+    </style>
+</head>
+<body>
+    <span class="font" id="btn" style="color: #0ff;">别点</span>
+</body>
+</html>

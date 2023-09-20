@@ -1,0 +1,32 @@
+<!--
+ * @Author: v_wangwenjie05@baidu.com
+ * @Date: 2023-09-19 17:54:09
+ * @LastEditors: v_wangwenjie05@baidu.com
+ * @LastEditTime: 2023-09-19 17:54:14
+ * @FilePath: /H5C3stu/52伪元素.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 伪元素 通过css创建标签 默认行内元素 */
+        div::before {
+            content: "之前";
+            color: green;  
+        }
+
+        div::after {
+            content: "之后";
+        }
+    </style>
+</head>
+
+<body>
+    <div>div</div>
+</body>
+
+</html>

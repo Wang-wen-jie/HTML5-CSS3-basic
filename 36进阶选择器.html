@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 并集选择器 */
+        p , div {
+            color: #000;
+        }
+
+        /* 后代选择器 */
+        .father div {
+            width: 400px;
+            height: 100px;
+            background-color: #2b99ff;
+        }
+
+        /* 子代选择器 */
+        .son > div {
+            color: #ff0000;
+        }
+
+        /* 邻接兄弟选择器 */
+        .grandson2 + p {
+            color: pink;
+        }
+        /* 通用兄弟选择器 */
+        .grandson1 ~ p {
+            color: pink;
+        }
+        /* 关系选择器 */
+        .father > div[class="son-two"] {
+            background-color: #00f089;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="father">
+        <div class="son">
+            <div>
+                children one
+                <div>description: first children</div>
+            </div>
+        </div>
+        <div class="son-two">
+            <p class="grandson1">children 1</p>
+            <p>children two</p>
+            <p>children two</p>
+        </div>
+        <div>
+            <p>children three</p>
+            <p class="grandson2">children 2</p>
+            <p>children five</p>
+        </div>
+    </div>
+</body>
+
+</html>

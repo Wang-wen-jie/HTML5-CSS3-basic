@@ -1,0 +1,45 @@
+<!--
+ * @Author: v_wangwenjie05@baidu.com
+ * @Date: 2023-09-19 17:42:19
+ * @LastEditors: v_wangwenjie05@baidu.com
+ * @LastEditTime: 2023-09-19 17:42:23
+ * @FilePath: /H5C3stu/51结构伪类选择器.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box p:first-child{
+            color: red;
+        }
+        .box p:last-child{
+            color: blue;
+        }
+        /* 第几个 */
+        .box p:nth-child(2n){
+            background-color: aqua;
+        }
+        .box p:nth-last-child(2n-1){
+            background-color: chocolate;
+        }
+        /* n常见公式
+            偶数 2n even
+            奇数 2n-1 2n+1 odd
+            前五个 -n+5
+            第五个之后的 n+5
+        */
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <p>4</p>
+        <p>5</p>
+    </div>
+</body>
+</html>

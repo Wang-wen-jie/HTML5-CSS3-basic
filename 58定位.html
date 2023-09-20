@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 元素的层级关系:标准流<浮动<定位
+            可以使用z-index来添加层级关系
+        */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 100vw;
+            height: 100vh;
+            background-color: pink;
+        }
+
+        .box >div {
+            width: 100px;
+            height: 100px;
+        }
+
+        /* 静态定位 */
+        .static {
+            background-color: #b9992f;
+            position: static;
+        }
+
+        /* 相对定位:相对于原有位置，且不脱离文档流 */
+        .relative {
+            background-color: #58a81c;
+            position: relative;
+            top: 100px;
+            left: 100px;
+        }
+
+        /* 相对定位:相对于已定位父元素定位，如果没有则相对浏览器窗口，脱离文档流 */
+        .absolute {
+            background-color: #28a8c8;
+            position: absolute;
+            /* 居中 */
+            top: 50%;
+            left: 50%;
+            /* margin-top: -50px;
+            margin-left: -50px; */
+            transform: translate(-50%, -50%);
+        }
+
+        /* 固定定位：相对于视口定位，脱离文档流 */
+        .box > .fiexd {
+            height: 600px;
+            background-color: #940953;
+            position: fixed;
+            top: 200px;
+            right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="relative">
+
+        </div>
+        <div class="absolute">
+
+        </div>
+        <div class="fiexd">
+
+        </div>
+        <div class="static"></div>
+    </div>
+</body>
+
+</html>

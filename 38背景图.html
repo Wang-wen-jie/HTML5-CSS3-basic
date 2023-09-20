@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 400px;
+            height: 400px;
+            background-color: pink;
+            background-image: url('./img-01.jpg');
+            background-repeat: no-repeat;
+            /* background-position: 水平 垂直;  数字+px 可为负数 方向为 → ↓*/
+            background-position: right center;
+        }
+        .cat{
+            width: 400px;
+            height: 400px;
+            /* 背景色 背景图 背景平铺 背景位置 不分先后顺序 */
+            background: blue url(./img-01.jpg) no-repeat 150px center;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+
+    </div>
+    <div class="cat"></div>
+</body>
+</html>

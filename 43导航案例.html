@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a {
+            display: inline-block;
+            width: 100px;
+            height: 40px;
+            margin-right: 20px;
+            background-color: #7b0808;
+            text-align: center;
+            line-height: 40px;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        a:hover {
+            background-color: orangered;
+        }
+
+        a::after{
+            content: " ➥";
+        }
+    </style>
+</head>
+
+<body>
+    <div><a href="#">导航1</a><a href="#">导航2</a><a href="#">导航3</a><a href="#">导航4</a><a href="#">导航5</a></div>
+</body>
+
+</html>

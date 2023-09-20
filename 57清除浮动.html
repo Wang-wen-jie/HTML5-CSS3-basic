@@ -1,0 +1,80 @@
+<!--
+ * @Author: v_wangwenjie05@baidu.com
+ * @Date: 2023-09-19 18:52:06
+ * @LastEditors: v_wangwenjie05@baidu.com
+ * @LastEditTime: 2023-09-20 10:37:10
+ * @FilePath: /H5C3stu/57清除浮动.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 600px;
+            /* 父子级标签，子级浮动，父级没有高度，后面的标准流盒子会收影响，显示到上层 */
+            /* 方案一：父级添加高度，缺陷不利于弹性展示内容 */
+            /* height: 300px; */
+            background-color: pink;
+            margin: 0 auto;
+
+            /* 方案五 */
+            overflow: hidden;
+        }
+        .left{
+            float: left;
+            width: 100px;
+            height: 300px;
+            background-color: grey;
+        }
+        .right{
+            float: right;
+            width: 486px;
+            height: 300px;
+            background-color: rgb(130, 182, 209);
+        }
+
+        /* 方案二 */
+        /* .clearfix {
+            clear: both;
+        } */
+
+        .foot{
+            height: 100px;
+            background-color: green;
+        }
+
+        /* 方案三 */
+        /* .clearfix::after{
+            content: '';
+            display: block;
+            clear: both;
+
+            height: 0;
+            visibility: hidden;
+        } */
+
+        /* 方案四：双伪元素清除,解决外边距塌陷问题 */
+        /* .clearfix::before,
+        .clearfix::after{
+            content: '';
+            display: table;
+        }
+        .clearfix::after{
+            clear: both;
+        } */
+    </style>
+</head>
+<body>
+    <!-- 方案三：单伪元素清除浮动 -->
+    <div class="box clearfix">
+        <div class="left"></div>
+        <div class="right"></div>
+        <!-- 方案二：父级内容末尾添加clear:both ,缺陷造成结构复杂 -->
+        <!-- <div class="clearfix"></div> -->
+    </div>
+    <div class="foot"></div>
+</body>
+</html>

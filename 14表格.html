@@ -1,0 +1,68 @@
+<!--
+ * @Author: v_wangwenjie05@baidu.com
+ * @Date: 2023-09-18 16:11:33
+ * @LastEditors: v_wangwenjie05@baidu.com
+ * @LastEditTime: 2023-09-18 16:23:12
+ * @FilePath: /H5C3stu/14表格-基本使用.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1" width="500">
+        <!-- 表格标题 -->
+        <caption>
+            <strong>学生成绩单</strong>
+        </caption>
+        <!-- 表头 -->
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>学号</th>
+                <th>成绩</th>
+            </tr>
+        </thead>
+        <!-- 表主体 -->
+        <tbody>
+            <tr>
+                <td>张三</td>
+                <td>111</td>
+                <td>93</td>
+            </tr>
+            <tr>
+                <td>李四</td>
+                <td>112</td>
+                <td>97</td>
+            </tr>
+            <tr>
+                <td>王五</td>
+                <td>113</td>
+                <td>89</td>
+            </tr>
+            <tr>
+                <td>陈六</td>
+                <td>114</td>
+                <!-- 行合并 -->
+                <td rowspan="2">93</td>
+            </tr>
+            <tr>
+                <td>刘七</td>
+                <td>115</td>
+            </tr>
+            
+        </tbody>
+        <!-- 表位 -->
+        <tfoot>
+            <tr>
+                <td>平均分</td>
+                <!-- 列合并 -->
+                <td colspan="2">93</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
